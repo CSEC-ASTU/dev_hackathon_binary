@@ -1,0 +1,267 @@
+role:
+    - id
+    - name
+    - description
+    - permissions
+    - is_active
+    - created_at
+    - updated_at
+
+user:
+    - id
+    - username
+    - email
+    - password
+    - last_login
+    - telegram_chat_id
+    - is_superuser
+    - profile_picture
+    - is_active
+    - deactivated_at
+    - deactivation_reason
+    - created_at
+    - updated_at 
+
+user_role:
+    - id
+    - user_id
+    - role_id
+    - is_active
+    - created_at
+    - updated_at
+
+user_detail:
+    - id
+    - user_id
+    - student_id
+    - fname
+    - lname
+    - phone
+    - gender
+    - year (not auto)
+    - telegram_username
+    - is_active
+    - created_at
+    - updated_at 
+
+user_verification:
+    - id
+    - user_id
+    - type (0-> account,  1->password)
+    - otp
+    - expiry_date
+    - is_active
+    - created_at
+    - updated_at
+
+user_feed_notification:
+    - id    
+    - is_email
+    - is_telegram
+    - is_active
+    - created_at
+    - updated_at
+
+division:
+    - id
+    - name
+    - description
+    - is_active
+    - created_at
+    - updated_at
+
+sub_division:
+    - id
+    - division_id
+    - name
+    - description
+    - is_active
+    - created_at
+    - updated_at
+
+user_division:
+    - id    
+    - user_id
+    - division_id
+    - sub_division_id (nullable)
+    - is_active
+    - created_at
+    - updated_at
+
+event:
+    - id
+    - division_id
+    - title
+    - description
+    - image_url
+    - issue_date
+    - start_date
+    - end_date
+    - is_active
+    - created_at
+    - updated_at
+
+event_comment:
+    - id
+    - event_id
+    - user_id
+    - comment
+    - is_active
+    - created_at
+    - updated_at
+
+event_react:
+    - id
+    - event_id
+    - user_id
+    - is_active
+    - created_at
+    - updated_at
+
+notification:
+    - id
+    - user_id
+    - event_id
+    - is_active
+    - created_at
+    - updated_at
+
+feed_type:
+    - id
+    - name
+    - description
+    - is_active
+    - created_at
+    - updated_at
+
+feed:
+    - id
+    - user_id
+    - event_id (nullable)
+    - feed_type_id
+    - title
+    - description
+    - issue_date
+    - is_active
+    - created_at
+    - updated_at
+
+feed_file:
+    - id
+    - feed_id
+    - file_url
+    - is_active
+    - created_at
+    - updated_at
+
+feed_comment:
+    - id
+    - feed_id
+    - user_id
+    - comment
+    - is_active
+    - created_at
+    - updated_at
+
+feed_react:
+    - id
+    - feed_id
+    - user_id
+    - reaction (default = like)
+    - is_active
+    - created_at
+    - updated_at
+
+chat:
+    - id 
+    - user_1
+    - user_2 
+    - is_active
+    - created_at 
+    - updated_at
+
+message:
+    - id
+    - chat_id
+    - sender_id
+    - receiver_id
+    - message
+    - is_active
+    - created_at
+    - updated_at
+
+recomendation / request:
+    - id
+    - sender_id 
+    - receiver_id
+    - message
+    - status (0->pending, 1->accepted, 2->rejected)
+    - is_active
+    - created_at
+    - updated_at
+
+hall_of_fame:
+    - id
+    - user_id
+    - title
+    - description
+    - image_url
+    - source_url
+    - role
+    - issue_date
+    - is_active
+    - created_at
+    - updated_at
+
+user_role_history:
+    - id
+    - user_id
+    - role_id
+    - issue_date
+    - is_active
+    - created_at
+    - updated_at
+
+voting:
+    - id
+    - event_id
+    - is_active
+    - created_at
+    - updated_at
+
+vote_choice:
+    - id
+    - voting_id
+    - title
+    - description
+    - image_url
+    - is_active
+    - created_at
+    - updated_at
+
+user_vote:
+    - id
+    - user_id
+    - voting_id
+    - vote_choice_id
+    - is_active
+    - created_at
+    - updated_at
+
+attendance:
+    - id
+    - user_id
+    - event_id
+    - is_late
+    - is_active
+    - created_at
+    - updated_at
+
+report:
+    - id
+    - user_id
+    - reported_user_id
+    - report_reason
+    - is_active
+    - created_at
+    - updated_at

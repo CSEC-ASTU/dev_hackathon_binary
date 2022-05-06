@@ -1,0 +1,144 @@
+
+All Pages:
+    - account   
+        - login
+        - signup
+        - forget password
+        - email verification
+    - home (without login)
+    - home (with login)
+    - users
+        - list
+            - edit
+            - delete
+            - detail
+        - create
+    - divisions
+        - list
+            - edit
+            - delete
+            - detail
+        - create
+    - sub divisions:
+        - list
+            - edit
+            - delete
+            - detail
+        - create
+    - feed:
+        - list
+            - edit
+            - delete
+            - detail
+        - create 
+    - events:
+        - list
+            - edit
+            - delete
+            - detail
+                - attendance
+                    - list
+        - create
+            - vote
+    - hall of fame:
+        - list
+            - edit
+            - delete
+            - detail
+        - create
+    - profile:
+        - edit
+        - delete
+        - detail
+    - messages:
+        - inbox
+        - outbox
+        - recomendations
+        - compose
+    - roles:
+        - list
+            - edit
+            - delete    
+    - notifications:
+        - list
+            - detail
+    - reports:
+        - list
+            - edit
+            - delete
+            - detail
+        - create
+    - requests:
+        - list
+            - edit
+            - delete
+            - detail
+        - create
+
+superadmin: (system admin)
+    - home
+    - users
+    - divisions
+    - sub divisions
+    - feed
+    - events
+    - hall of fame
+    - profile
+    - messages
+    - roles
+    - notifications
+
+Admin: (president)  
+    - home
+    - users
+    - divisions
+    - sub divisions
+    - events
+    - feed
+    - hall of fame
+    - profile
+    - messages
+    - notification
+    - requests
+    - reports
+
+division head: (division admin)
+    - home
+    - users
+    - sub divisions
+    - feed
+    - events
+    - hall of fame
+    - profile
+    - messages
+    - notification
+
+discipline committee: (discipline committee)
+    - home
+    - reports
+    - message
+    - profile
+    - notification
+    - feed
+    - events
+
+members: (member)
+    - home
+    - profile
+    - messages
+    - notification
+    - feed
+    - events
+
+user: (user)
+    - home
+    - profile
+    - feed
+    - events
+    - requests
+
+user :  (without login)
+    - home (without login)
+    - login
+    - forget password
+    - email verification
