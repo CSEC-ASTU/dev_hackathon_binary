@@ -1,0 +1,59 @@
+.post-image{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.post-poster{
+    margin-bottom: 0%; 
+    margin-left: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.post-poster:hover{
+    text-decoration: underline;
+}
+
+.post-time{
+    margin-bottom: 0%;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.post-post{
+    overflow-wrap: break-word;
+}
+
+.link-card{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.like, .comment{
+    cursor: pointer;
+}
+
+.like p, .comment p{
+    margin-bottom: 0%;
+    margin-left: 5px;
+}
+
+.like:hover{
+    color: red;
+}
+
+.comment:hover{
+    color: blue;
+}
+
+.popup-account{
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    position: fixed;
+    top: 100px;
+    z-index: 100;
+}
