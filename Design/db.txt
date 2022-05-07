@@ -97,6 +97,7 @@ event:
     - issue_date
     - start_date
     - end_date
+    - is_public
     - is_active
     - created_at
     - updated_at
@@ -114,6 +115,7 @@ event_react:
     - id
     - event_id
     - user_id
+    - reaction (0-> like, 1-> dislike)
     - is_active
     - created_at
     - updated_at
@@ -167,7 +169,7 @@ feed_react:
     - id
     - feed_id
     - user_id
-    - reaction (default = like)
+    - reaction (0-> like, 1-> dislike)
     - is_active
     - created_at
     - updated_at
@@ -196,6 +198,7 @@ recomendation / request:
     - receiver_id
     - message
     - status (0->pending, 1->accepted, 2->rejected)
+    - is_recomendation (0->request, 1->recomendation)
     - is_active
     - created_at
     - updated_at
@@ -239,7 +242,7 @@ vote_choice:
     - created_at
     - updated_at
 
-user_vote:
+user_vote_choice:
     - id
     - user_id
     - voting_id
@@ -265,3 +268,33 @@ report:
     - is_active
     - created_at
     - updated_at
+
+order of tables:
+    - role
+    - user
+    - user_role
+    - user_detail
+    - user_verification
+    - user_feed_notification
+    - division
+    - sub_division
+    - user_division
+    - event
+    - event_comment
+    - event_react
+    - notification
+    - feed_type
+    - feed
+    - feed_file
+    - feed_comment
+    - feed_react
+    - chat
+    - message
+    - recomendation
+    - hall_of_fame
+    - user_role_history
+    - voting
+    - vote_choice
+    - user_vote_choice
+    - attendance
+    - report

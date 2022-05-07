@@ -52,9 +52,33 @@
 .popup-account{
     width: inherit;
     height: inherit;
-    border-radius: 10px;
+    border-radius: 25rem !important;
     position: absolute;
-    top: 100px;
-    z-index: 100;
+    z-index: 10;
     display: none;
+}
+
+.list:first-child.popup-account{
+    top: 110px;
+}
+
+.list:last-child{
+    bottom: 110px;
+}
+
+.list .user{
+    border-radius: 25rem;
+}
+
+.list:last-child{
+    padding-bottom: 1rem!important;
+}
+
+.popup-account.d-md-block{
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+.btn{
+    border-radius: 25rem;
 }
