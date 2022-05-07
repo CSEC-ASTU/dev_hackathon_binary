@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\FeedController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class,'index']);
-Route::prefix('customer')->group(function () {
+Route::get('/', [HomeController::class,'index'])->name('public.home');
+Route::post('/account/login', [AccountController::class,'login'])->name('account.login');
+Route::post('/account/register', [AccountController::class,'register'])->name('account.register');
+Route::get('/account/logout', [AccountController::class,'logout'])->name('account.logout');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/home', [FeedController::class,'home'])->name('home');
 });
