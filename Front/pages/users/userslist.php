@@ -20,32 +20,37 @@
             </div>
         </div>
         <!-- /.card-header -->
-        <div class="card-body">
-            <table class="table table-sm">
-                <thead>
-                    <tr>
-                        <th style="width: 10px">#</th>
-                        <th>Full Name</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1.</td>
-                        <td>Update software</td>
-                        <td>
-                            <a href="" class="btn btn-primary btn-xs">
-                                <i class="fas fa-eye"></i>
-                                view
-                            </a>
-                            <a href="" class="btn btn-info btn-xs">
-                                <i class="fas fa-edit"></i>
-                                edit
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+        <!-- users list -->
+
+        <div class="list">
+            <!-- user start -->
+            <div class="list-row">
+                <div class="card-body user p-3">
+                    <div class="d-flex align-items-center">
+                        <img src="assets/dist/img/logo.jpg" class="post-image">
+                        <p class="post-poster" onmouseover="hoverUser(this)" onmouseleave="mouseLeaveUser(this)">Name Here</p>
+
+                        <div class="card-body float-right p-0">
+                            <button class="btn btn-tool btn-primary float-right">clickme</button>
+                        </div>
+                    </div>
+
+                    <div class="popup-account d-none">
+                        <div class="card">
+                            <div class="card-header">
+                                <img src="assets/dist/img/logo.jpg" class="post-image">
+                                <p style="font-weight: bold;">Name Here</p>
+                                <p style="font-weight: lighter;">description about the "Name Here"</p>
+
+                                <p style="margin-top: 30px; font-weight: bold;">CPD Member</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- user end -->
+
         </div>
     </div>
 </div>
