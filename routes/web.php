@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\FeedController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,14 @@ Route::get('/account/logout', [AccountController::class,'logout'])->name('accoun
 
 Route::middleware('auth')->group(function () {
     Route::get('/home', [FeedController::class,'home'])->name('home');
+
+    // routes for roles
+    Route::prefix('/roles')->group(function () {
+        Route::get('/', [RoleController::class,'home'])->name('roles.home');
+        Route::get('/add', [RoleController::class,'add'])->name('roles.add');
+        Route::post('/add/store', [RoleController::class,'store'])->name('roles.store');
+        Route::get('/view/{id}', [RoleController::class,'show'])->name('roles.show');
+    });
+
+    // routes for users
 });

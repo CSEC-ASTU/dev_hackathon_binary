@@ -33,12 +33,12 @@
                         <a class="h1"><b>CSEC</b> ASTU</a>
                     </div>
                     <div class="card-body">
-                        @if (Session::get('login-error'))
+                        @if (Session::has('login-error'))
                             <div class="alert alert-danger alert-dismissible">
                                 <i class="icon fas fa-ban"></i> {{ Session::get('login-error') }}
                             </div>
                         @endif
-                        
+
                         <p class="login-box-msg">Sign in to start your session</p>
                         <form action="{{ route('account.login') }}" method="post">
                             @csrf
@@ -48,7 +48,7 @@
                                     <div class="input-group-text">
                                         <i class="fas fa-envelope"></i>
                                     </div>
-                                </div>                               
+                                </div>
                             </div>
                             <div class="input-group mb-3">
                                 <input type="password" class="form-control @error('password') {{ 'is-invalid' }} @enderror "name="password" placeholder="Password" />

@@ -1,6 +1,6 @@
 <aside class="sidebar-dark-primary col-md-3 border-right" style="background-color: transparent !important;">
     <a href="#" class="brand-link" style="background-color: transparent !important">
-        <img src="assets/dist/img/logo.jpg" alt="CSEC Logo" class="brand-image img-circle elevation-3"
+        <img src="{{ asset('assets/dist/img/logo.jpg')}}" alt="CSEC Logo" class="brand-image img-circle elevation-3"
             style="opacity: 0.8" />
         <span class="brand-text font-weight-light">CSEC ASTU</span>
     </a>
@@ -9,13 +9,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-flat" data-widget="treeview"
                 role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="#" class="nav-link @if(Session::get('home')) active @endif">
+                    <a href="#" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-hashtag"></i>
                         <p>Feeds</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link {{ (request()->is('event*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-calendar-check"></i>
                         <p>
                             Events

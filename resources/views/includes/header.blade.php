@@ -13,6 +13,8 @@
 <link rel="stylesheet" href="{{ asset('assets/overlayScrollbars/css/OverlayScrollbars.min.css')}}" />
 <!-- DataTables -->
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css" />
+<!-- Bootstrap4 Duallistbox -->
+<link rel="stylesheet" href="{{ asset('assets/bootstrap4-duallistbox/bootstrap-duallistbox.min.css')}}">
 <!-- Custom styles -->
 <link rel="stylesheet" href="{{ asset('assets/custom.css')}}">
 <style>

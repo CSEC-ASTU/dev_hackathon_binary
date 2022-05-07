@@ -8,6 +8,8 @@
 <script src="{{ asset('assets/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- DataTables -->
 <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="{{ asset('assets/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js')}}"></script>
 <!-- Custom js -->
 <script src="{{ asset('assets/custom-jquery.js')}}"></script>
 <script>
@@ -17,6 +19,7 @@
       "lengthChange": false,
       "autoWidth": false,
     })
+    $('.duallistbox').bootstrapDualListbox()
   });
   $('#messageNav').css('width', $('.col-md-6').width());
   @error('username')
