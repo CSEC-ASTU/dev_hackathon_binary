@@ -9,6 +9,6 @@ class FeedController extends Controller
     //
 
     public function home(){
-        return view('index');
+        return view('index')->with('home', 'Feed');
     }
 }

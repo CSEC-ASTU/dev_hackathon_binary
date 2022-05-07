@@ -19,4 +19,31 @@
     })
   });
   $('#messageNav').css('width', $('.col-md-6').width());
+  @error('username')
+        $('#modal-signin').modal('show');
+    @enderror
+
+    @error('password')
+        $('#modal-signin').modal('show');
+    @enderror
+
+    @error('new_email')
+        $('#modal-signup').modal('show');
+    @enderror
+
+    @error('new_password')
+        $('#modal-signup').modal('show');
+    @enderror
+
+    @error('new_password_confirmation')
+        $('#modal-signup').modal('show');
+    @enderror
+
+    @error('new_username')
+        $('#modal-signup').modal('show');
+    @enderror
+
+    @if (Session::get('login-error'))
+    $('#modal-signin').modal('show');
+    @endif
 </script>

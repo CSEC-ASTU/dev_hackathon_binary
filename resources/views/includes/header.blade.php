@@ -29,6 +29,14 @@
         border-radius: 25rem;
     }
 
+    .nav .nav-item a:focus {
+        border-radius: 25rem;
+    }
+
+    .nav .nav-item .active {
+        border-radius: 25rem;
+    }
+
     .login-form .input-group .form-control {
         background: transparent !important;
         color: white !important;

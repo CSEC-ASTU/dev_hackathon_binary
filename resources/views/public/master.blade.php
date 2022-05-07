@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include('public.header')
+    @include('includes.header')
     <title>@yield('page-title')</title>
   </head>
   <body class="hold-transition dark-mode">
@@ -13,6 +13,6 @@
       </div>
     </div>
 
-    @include('public.script')
+    @include('includes.script')
   </body>
 </html>

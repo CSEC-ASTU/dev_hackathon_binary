@@ -9,7 +9,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-flat" data-widget="treeview"
                 role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link @if(Session::get('home')) active @endif">
                         <i class="nav-icon fas fa-hashtag"></i>
                         <p>Feeds</p>
                     </a>
