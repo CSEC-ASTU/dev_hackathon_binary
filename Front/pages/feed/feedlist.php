@@ -10,13 +10,27 @@
     </div>
 
     <!-- Post -->
-    <div class="post card p-4">
+    <div class="post card p-4" style="position: relative;">
         <div class="user-block">
             <img class="img-circle img-bordered-sm" src="assets/dist/img/logo.jpg" alt="user image">
             <span class="username">
-                <a href="#">Jonathan Burke Jr.</a>
+                <a href="#"onmouseover="hoverDiv(this)"
+                    onmouseleave="mouseLeave(this)"
+                    >Jonathan Burke Jr.</a>
             </span>
             <span class="description">Shared publicly - 7:30 PM today</span>
+        </div>
+
+        <div class="popup-account d-none">
+            <div class="card">
+                <div class="card-header">
+                    <img src="assets/dist/img/logo.jpg" class="post-image">
+                    <p style="font-weight: bold;">Name Here</p>
+                    <p style="font-weight: lighter;">description about the "Name Here"</p>
+
+                    <p style="margin-top: 30px; font-weight: bold;">100 Members</p>
+                </div>
+            </div>
         </div>
         <!-- /.user-block -->
         <p>
@@ -60,13 +74,27 @@
     <!-- /.post -->
 
     <!-- Post -->
-    <div class="post card p-4">
+    <div class="post card p-4" style="position: relative;">
         <div class="user-block">
             <img class="img-circle img-bordered-sm" src="assets/dist/img/logo.jpg" alt="user image">
             <span class="username">
-                <a href="#">Jonathan Burke Jr.</a>
+                <a href="#"onmouseover="hoverDiv(this)"
+                    onmouseleave="mouseLeave(this)"
+                    >Jonathan Burke Jr.</a>
             </span>
             <span class="description">Shared publicly - 7:30 PM today</span>
+        </div>
+
+        <div class="popup-account d-none">
+                <div class="card">
+                <div class="card-header">
+                    <img src="assets/dist/img/logo.jpg" class="post-image">
+                    <p style="font-weight: bold;">Name Here</p>
+                    <p style="font-weight: lighter;">description about the "Name Here"</p>
+
+                    <p style="margin-top: 30px; font-weight: bold;">100 Members</p>
+                </div>
+            </div>
         </div>
         <!-- /.user-block -->
         <p>
@@ -110,13 +138,28 @@
     <!-- /.post -->
 
     <!-- Post -->
-    <div class="post card p-4">
+    <div class="post card p-4" style="position: relative;">
         <div class="user-block">
             <img class="img-circle img-bordered-sm" src="assets/dist/img/logo.jpg" alt="user image">
             <span class="username">
-                <a href="#">Jonathan Burke Jr.</a>
+                <a href="#"
+                    onmouseover="hoverDiv(this)"
+                    onmouseleave="mouseLeave(this)"
+                    >Jonathan Burke Jr.</a>
             </span>
             <span class="description">Shared publicly - 7:30 PM today</span>
+        </div>
+
+        <div class="popup-account d-none">
+            <div class="card">
+                <div class="card-header">
+                    <img src="assets/dist/img/logo.jpg" class="post-image">
+                    <p style="font-weight: bold;">Name Here</p>
+                    <p style="font-weight: lighter;">description about the "Name Here"</p>
+
+                    <p style="margin-top: 30px; font-weight: bold;">100 Members</p>
+                </div>
+            </div>
         </div>
         <!-- /.user-block -->
         <p>
