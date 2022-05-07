@@ -24,4 +24,8 @@
     .right-search{
         border-radius: 25rem;
     }
+
+    .nav .nav-item a:hover {
+        border-radius: 25rem;
+    }
 </style>

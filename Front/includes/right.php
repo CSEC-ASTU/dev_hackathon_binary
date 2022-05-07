@@ -4,7 +4,7 @@
     <div class="sidebar">
 
       <div class="form-inline mt-4">
-        <div class="input-group" data-widget="sidebar-search">
+        <div class="input-group">
           <input class="form-control form-control-sidebar right-search" type="search" placeholder="Search" aria-label="Search">
         </div>
       </div>
