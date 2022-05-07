@@ -51,10 +51,9 @@ All Pages:
         - delete
         - detail
     - messages:
-        - inbox
-        - outbox
+        - chat room
         - recomendations
-        - compose
+        - new
     - roles:
         - list
             - edit

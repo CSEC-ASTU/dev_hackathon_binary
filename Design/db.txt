@@ -114,6 +114,7 @@ event_react:
     - id
     - event_id
     - user_id
+    - reaction (0-> like, 1-> dislike)
     - is_active
     - created_at
     - updated_at
@@ -167,7 +168,7 @@ feed_react:
     - id
     - feed_id
     - user_id
-    - reaction (default = like)
+    - reaction (0-> like, 1-> dislike)
     - is_active
     - created_at
     - updated_at
