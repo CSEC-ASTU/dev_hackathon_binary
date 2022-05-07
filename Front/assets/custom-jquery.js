@@ -1,13 +1,13 @@
 function hoverDiv(div){
 
-    const popup = $(div).parent().next()
+    const popup = $(div).parent().parent().next()
     popup.addClass("d-md-block")
     return false;
 }
 
 function mouseLeave(div){
 
-    const popup = $(div).parent().next()
+    const popup = $(div).parent().parent().next()
     popup.removeClass("d-md-block");
     return false;
 }
