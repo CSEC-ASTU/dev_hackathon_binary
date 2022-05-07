@@ -8,4 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Report extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id','reported_user_id','report_reason','is_active'
+    ];
+
+    protected $guarded = [];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    public function reported_user()
+    {
+        return $this->belongsTo(User::class, 'reported_user_id', 'id');
+    }
 }

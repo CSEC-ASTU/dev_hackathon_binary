@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class FeedType extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name', 'description', 'is_active'
+    ];
+
+    protected $guarded = [];
+
 }
