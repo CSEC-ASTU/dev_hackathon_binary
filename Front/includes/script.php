@@ -18,4 +18,5 @@
       "autoWidth": false,
     })
   });
+  $('#messageNav').css('width', $('.col-md-6').width());
 </script>

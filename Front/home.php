@@ -5,9 +5,9 @@
   </head>
   <body class="hold-transition dark-mode">
     <div class="wrapper">
-      <div class="row pl-5 pt-2">
+      <div class="row pl-5 pt-2 m-0">
         <?php include 'includes/left.php'; ?>
-        <?php include './pages/users/userslist.php'; ?>
+        <?php include './pages/messages/chat.php'; ?>
         <?php include 'includes/right.php'?>
       </div>
     </div>
