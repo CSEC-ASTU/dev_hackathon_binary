@@ -15,7 +15,15 @@ return new class extends Migration
     {
         Schema::create('votings', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('event_id');
+            $table->boolean('is_candidate_vote')->comment('true if candidate vote, false if not');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('event_id')
+                ->references('id')
+                ->on('events')
+                ->onDelete('cascade');
         });
     }
 

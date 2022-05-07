@@ -15,7 +15,27 @@ return new class extends Migration
     {
         Schema::create('feeds', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('event_id')->nullable();
+            $table->unsignedBigInteger('feed_type_id');
+            $table->string('title');
+            $table->text('description')->nullable();;
+            $table->timestamp('issue_date')->nullable();
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+            $table->foreign('event_id')
+                ->references('id')
+                ->on('events')
+                ->onDelete('cascade');
+            $table->foreign('feed_type_id')
+                ->references('id')
+                ->on('feed_types')
+                ->onDelete('cascade');
         });
     }
 

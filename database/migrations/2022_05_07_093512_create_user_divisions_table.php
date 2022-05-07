@@ -15,7 +15,24 @@ return new class extends Migration
     {
         Schema::create('user_divisions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('division_id');
+            $table->unsignedBigInteger('sub_division_id')->nullable();
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+            $table->foreign('division_id')
+                ->references('id')
+                ->on('divisions')
+                ->onDelete('cascade');
+            $table->foreign('sub_division_id')
+                ->references('id')
+                ->on('sub_divisions')
+                ->onDelete('cascade');
         });
     }
 

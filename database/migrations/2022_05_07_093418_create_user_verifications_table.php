@@ -15,7 +15,18 @@ return new class extends Migration
     {
         Schema::create('user_verifications', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->integer('type')->comment('0: account, 1: password');
+            $table->string('token');
+            $table->boolean('is_verified')->default(false);
+            $table->timestamp('expiry_date')->nullable();
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
+            $table->softDeletes();
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
