@@ -62,4 +62,19 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class, 'user_roles', 'user_id', 'role_id');
     }
+
+    public function detail()
+    {
+        return $this->hasOne(UserDetail::class, 'user_id', 'id');
+    }
+
+    public function feed()
+    {
+        return $this->hasMany(Feed::class, 'user_id', 'id');
+    }
+
+    public function feedComment()
+    {
+        return $this->hasMany(FeedComment::class, 'user_id', 'id');
+    }
 }

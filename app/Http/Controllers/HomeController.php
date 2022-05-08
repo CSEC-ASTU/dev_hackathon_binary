@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Feed;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,8 @@ class HomeController extends Controller
         if(Auth::check()){
             return redirect()->route('home');
         }else{
-            return view('home');
+            $feed = Feed::where('is_active', 1)->get();
+            return view('home')->with('feeds', $feed);
         }
     }
 }

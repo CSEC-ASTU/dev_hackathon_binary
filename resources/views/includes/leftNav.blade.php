@@ -9,13 +9,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-flat" data-widget="treeview"
                 role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}">
+                    <a href="{{ route('home')}}" class="nav-link {{ (request()->is('home')) ? 'active' : '' }} {{ (request()->is('feed*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-hashtag"></i>
                         <p>Feeds</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ (request()->is('event*')) ? 'active' : '' }}">
+                    <a href="{{ route('events.home')}}" class="nav-link {{ (request()->is('event*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-calendar-check"></i>
                         <p>
                             Events
@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('users.home')}}" class="nav-link {{ (request()->is('users*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                             Users
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('divisions.home')}}" class="nav-link {{ (request()->is('divisions*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-bezier-curve"></i>
                         <p>
                             Divisions
@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('subdivisions.home')}}" class="nav-link {{ (request()->is('subdivisions*')) ? 'active' : '' }}">
                         <i class="nav-icon fab fa-blackberry"></i>
                         <p>
                             Sub Divisions
@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('roles.home')}}" class="nav-link {{ (request()->is('roles*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user-tag"></i>
                         <p>
                             Roles
@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('reports.home')}}" class="nav-link {{ (request()->is('reports*')) ? 'active' : '' }}">
                         <i class="nav-icon far fa-flag"></i>
                         <p>
                             Reports
@@ -63,7 +63,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('requests.home')}}" class="nav-link {{ (request()->is('requests*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-question"></i>
                         <p>
                             Requests
@@ -71,9 +71,16 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('users.profile')}}" class="nav-link {{ (request()->is('profile*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-wrench"></i>
                         <p>Profile</p>
+                    </a>
+                </li>
+                <li class="nav-header">Account</li>
+                <li class="nav-item">
+                    <a href="{{ route('account.logout')}}" class="nav-link {{ (request()->is('profile*')) ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
+                        <p>logout</p>
                     </a>
                 </li>
             </ul>

@@ -14,7 +14,7 @@
                 <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-flat" data-widget="treeview"
                     role="menu" data-accordion="false">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('halloffames.home')}}" class="nav-link {{ (request()->is('halloffames*')) ? 'active' : '' }}">
                             <i class="nav-icon fas fa-border-all"></i>
                             <p>
                                 Hall of Fame
@@ -22,13 +22,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('messages.home')}}" class="nav-link {{ (request()->is('messages*')) ? 'active' : '' }}">
                             <i class="nav-icon fas fa-envelope"></i>
                             <p>Messages</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('notifications')}}" class="nav-link {{ (request()->is('notifications*')) ? 'active' : '' }}">
                             <i class="nav-icon far fa-bell"></i>
                             <p>
                                 Notifications

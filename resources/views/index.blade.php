@@ -2,6 +2,6 @@
 
 @section('main-section')
     <div class="col-md-6 border-right">
-        @include('helper.feed.feedlist')
+        @include('feed.feedlist')
     </div>
 @endsection

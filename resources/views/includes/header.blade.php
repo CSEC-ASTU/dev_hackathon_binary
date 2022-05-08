@@ -15,6 +15,9 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css" />
 <!-- Bootstrap4 Duallistbox -->
 <link rel="stylesheet" href="{{ asset('assets/bootstrap4-duallistbox/bootstrap-duallistbox.min.css')}}">
+<!-- Select2 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" />
 <!-- Custom styles -->
 <link rel="stylesheet" href="{{ asset('assets/custom.css')}}">
 <style>
