@@ -22,54 +22,56 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('users.home')}}" class="nav-link {{ (request()->is('users*')) ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            Users
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('divisions.home')}}" class="nav-link {{ (request()->is('divisions*')) ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-bezier-curve"></i>
-                        <p>
-                            Divisions
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('subdivisions.home')}}" class="nav-link {{ (request()->is('subdivisions*')) ? 'active' : '' }}">
-                        <i class="nav-icon fab fa-blackberry"></i>
-                        <p>
-                            Sub Divisions
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('roles.home')}}" class="nav-link {{ (request()->is('roles*')) ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-user-tag"></i>
-                        <p>
-                            Roles
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('reports.home')}}" class="nav-link {{ (request()->is('reports*')) ? 'active' : '' }}">
-                        <i class="nav-icon far fa-flag"></i>
-                        <p>
-                            Reports
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('requests.home')}}" class="nav-link {{ (request()->is('requests*')) ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-question"></i>
-                        <p>
-                            Requests
-                        </p>
-                    </a>
-                </li>
+                @if(Auth::user()->is_superuser)
+                    <li class="nav-item">
+                        <a href="{{ route('users.home')}}" class="nav-link {{ (request()->is('users*')) ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>
+                                Users
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('divisions.home')}}" class="nav-link {{ (request()->is('divisions*')) ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-bezier-curve"></i>
+                            <p>
+                                Divisions
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('subdivisions.home')}}" class="nav-link {{ (request()->is('subdivisions*')) ? 'active' : '' }}">
+                            <i class="nav-icon fab fa-blackberry"></i>
+                            <p>
+                                Sub Divisions
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('roles.home')}}" class="nav-link {{ (request()->is('roles*')) ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-user-tag"></i>
+                            <p>
+                                Roles
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('reports.home')}}" class="nav-link {{ (request()->is('reports*')) ? 'active' : '' }}">
+                            <i class="nav-icon far fa-flag"></i>
+                            <p>
+                                Reports
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('requests.home')}}" class="nav-link {{ (request()->is('requests*')) ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-question"></i>
+                            <p>
+                                Requests
+                            </p>
+                        </a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a href="{{ route('users.profile')}}" class="nav-link {{ (request()->is('profile*')) ? 'active' : '' }}">
                         <i class="nav-icon fas fa-wrench"></i>
