@@ -15,4 +15,4 @@ yarn-error.log
 
 # python files
 __pycache__/
-**/logs.log
+bot/logs/logs.log
