@@ -78,7 +78,7 @@
                 </li>
                 <li class="nav-header">Account</li>
                 <li class="nav-item">
-                    <a href="{{ route('account.logout')}}" class="nav-link {{ (request()->is('profile*')) ? 'active' : '' }}">
+                    <a href="{{ route('account.logout')}}" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>
                         <p>logout</p>
                     </a>

@@ -36,6 +36,9 @@
     $('#enddate').datetimepicker({ icons: { time: 'far fa-clock' } });
     bsCustomFileInput.init();
   });
+
+
+
   $('#messageNav').css('width', $('.col-md-6').width());
   @error('username')
         $('#modal-signin').modal('show');

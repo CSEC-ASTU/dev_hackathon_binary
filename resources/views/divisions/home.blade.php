@@ -22,7 +22,7 @@
                 <thead>
                     <tr>
                         <th style="width: 10px">#</th>
-                        <th>Role name</th>
+                        <th>Name</th>
                         <th>Action</th>
                     </tr>
                 </thead>

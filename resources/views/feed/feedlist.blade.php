@@ -20,11 +20,23 @@
     </div>
 @endif
 
+@php
+
+    function convertURLs($string){
+        $url = '/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/';
+        return preg_replace($url, '<a href="$0" target="_blank" title="$0">$0</a>', $string);
+    }
+@endphp
+
 @foreach ($feeds as $feed)
     <!-- Post -->
     <div class="post card p-4" style="position: relative;">
         <div class="user-block">
-            <img class="img-circle img-bordered-sm" src="assets/dist/img/logo.jpg" alt="user image">
+            @if ($feed->user->profile_picture)
+
+            @else
+                <img class="img-circle img-bordered-sm" src="assets/dist/img/logo.jpg" alt="user image">
+            @endif
             <span class="username">
                 <a href="#" onmouseover="hoverDiv(this)" onmouseleave="mouseLeave(this)">{{ $feed->user->detail->first_name}} {{ $feed->user->detail->last_name}} </a>
             </span>
@@ -32,10 +44,11 @@
         </div>
 
 
-        <p>
-            {{ $feed->description }}
+        <p class="feed-description">
+            @php
+                echo convertURLs($feed->description)
+            @endphp
         </p>
-
         <p>
             <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
             <span class="float-right">
